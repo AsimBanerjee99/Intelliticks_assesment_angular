@@ -12,11 +12,11 @@
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let item of listOfProperty; let i = index" [attr.data-index]="i">
+                <tr *ngFor="let item of listOfProperty.records; let i = index" [attr.data-index]="i">
                     <th scope="row">{{i+1}}</th>
-                    <td>{{item.Property_name}}</td>
-                    <td>{{item.Size}}</td>
-                    <td>{{item.Descriptions}}</td>
+                    <td>{{item.fields.Property_name}}</td>
+                    <td>{{item.fields.Size}}</td>
+                    <td>{{item.fields.Descriptions}}</td>
                     <td><button class="btn btn-primary" type="button" (click)="deleteProperty(item.id)" id="{{item.id}}">Delete</button></td>
                 </tr>
                 

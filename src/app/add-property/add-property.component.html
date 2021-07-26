@@ -3,24 +3,24 @@
     width: 500px;
     padding-bottom: 20px;
 ">
-    <form action="" (ngSubmit) = "collectData()">
+    <form action="post" (ngSubmit) = "collectData()">
         <div class="mb-3">
             <label for="Property_name" class="col-form-label">Property Name</label>
             <div class="col">
-                <input type="text" class="form-control"  aria-label="Property name" [(ngModel)]="formData.Property_name" name="Property_name">
+                <input type="text" class="form-control"  aria-label="Property name" [(ngModel)]="formData.fields.Property_name" name="Property_name">
             </div>    
         </div>
 
         <div class="mb-3 row">
             <label for="size" class="col-form-label">Size</label>
             <div>
-                <input class="form-control" [(ngModel)]="formData.Size" name="Size">
+                <input class="form-control" [(ngModel)]="formData.fields.Size" name="Size">
             </div>
         </div>
 
         <div class="mb-3">
             <label for="Descriptions" class="form-label">Descriptions</label>
-            <textarea class="form-control"  rows="3" [(ngModel)]="formData.Descriptions" name="Descriptions"></textarea>
+            <textarea class="form-control"  rows="3" [(ngModel)]="formData.fields.Descriptions" name="Descriptions"></textarea>
         </div>
 
         <div class="container" style="width: fit-content;">

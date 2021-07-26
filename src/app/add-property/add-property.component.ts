@@ -12,9 +12,12 @@ import { Router } from '@angular/router';
 export class AddPropertyComponent implements OnInit {
 
   public formData = {
-    Property_name : "",
-    Size : "",
-    Descriptions : ""
+    fields: {
+      Property_name : "",
+      Size : "",
+      Descriptions : ""
+    },
+    typecast: true
   };
   public listOfProperty:any = [];
   constructor(private property_service_service:PropertyServiceService, private router:Router) { }
@@ -32,6 +35,7 @@ export class AddPropertyComponent implements OnInit {
         this.router.navigate(['/']);
       }
     );
+    
   }
 
 }
