@@ -18,10 +18,10 @@ export class PropertyServiceService {
   constructor( private http:HttpClient) { }
   
 
-  public base:string = "https://api.airtable.com/v0/appR2ZXcSGfeDWgCf/Table%201";
+  public base:string = "https://api.airtable.com/v0/YOUR-AIRTABLE-BASE-ID/Table%201";
   
   public httpHeader = new HttpHeaders ({
-    'Authorization': 'Bearer key0WFZ2eRZoBqL1S',
+    'Authorization': 'Bearer YOUR-AIRTABLE-API-KEY',
     'Content-Type': 'application/json'
   });
 
